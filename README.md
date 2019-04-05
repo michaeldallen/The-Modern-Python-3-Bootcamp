@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # michaeldallen.udemy
 
 ## The Modern Python 3 Bootcamp

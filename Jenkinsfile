@@ -14,6 +14,7 @@ pipeline {
                 sh 'pwd'
                 sh 'env | sort'
                 sh 'find . -name .git -prune -o -print'    
+                sh 'python -V'
                 sh 'make'
             }
         }

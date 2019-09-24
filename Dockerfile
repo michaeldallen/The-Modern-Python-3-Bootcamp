@@ -1,8 +1,27 @@
-FROM ubuntu:bionic
+# Ubuntu
+
+FROM ubuntu:xenial
 RUN apt-get update && apt-get -y dist-upgrade
-RUN apt-get install --assume-yes \
-  make \
-  bsdmainutils curl
+RUN apt-get update && apt-get -y install \
+    \
+    curl \
+    \
+    cowsay
 
-RUN apt-get update && apt-get upgrade -y
 
+
+# Python
+
+RUN apt-get update && apt-get install -y python3 
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py
+RUN pip install pytest 
+
+
+
+# execution
+
+WORKDIR /workdir
+
+ENTRYPOINT ["python3"]
+
+#EOF

@@ -13,6 +13,10 @@ pipeline {
                 sh 'make'
             }
         }
+        stage('pytest') {
+            sh "make pytest"
+        }
+        
     }
     post {
         success {

@@ -9,7 +9,7 @@ pipeline {
                 sh 'pwd'
                 sh 'env | sort'
                 sh 'find . -name .git -prune -o -print'    
-                sh 'python -V'
+                sh 'python3 -V'
                 sh 'make'
             }
         }

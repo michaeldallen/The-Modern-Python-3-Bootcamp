@@ -17,20 +17,6 @@ pipeline {
                 sh 'make'
             }
         }
-        
-        stage('build') {
-            steps {
-                sh 'make docker.build'
-            }
-        }
-        stage('publish') {
-            steps {
-                sh 'docker tag m2c-jenkins-${DPKG_ARCH} michaeldallen/m2c-jenkins-${DPKG_ARCH}'
-                withDockerRegistry([ credentialsId: "michaeldallen-at-dockerhub", url: "" ]) {
-                    sh 'docker push michaeldallen/m2c-jenkins-${DPKG_ARCH}'
-                }
-            }
-        }
     }
     post {
         success {

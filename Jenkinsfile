@@ -2,12 +2,12 @@ pipeline {
     agent { 
         dockerfile true
     }
-    stages ('init') {
-        steps {
-            slackSend color: 'good', message: "start on ${HOSTNAME}: michaeldallen/The-Modern-Python-3-Bootcamp (https://github.com/michaeldallen/The-Modern-Python-3-Bootcamp/commit/${GIT_COMMIT})"
-        }
-    }
     stages {
+        stage ('init') {
+            steps {
+                slackSend color: 'good', message: "start on ${HOSTNAME}: michaeldallen/The-Modern-Python-3-Bootcamp (https://github.com/michaeldallen/The-Modern-Python-3-Bootcamp/commit/${GIT_COMMIT})"
+            }
+        }
         stage('sanity-check') {
             steps {
                 sh 'id'

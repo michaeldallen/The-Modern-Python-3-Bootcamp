@@ -14,7 +14,9 @@ pipeline {
             }
         }
         stage('pytest') {
-            sh "make pytest"
+            steps {
+                sh "make pytest"
+            }
         }
         
     }

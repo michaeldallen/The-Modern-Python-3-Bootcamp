@@ -29,6 +29,8 @@ make.targets :
 	| sed 's/make    maven.release$$/make -n maven.release/'
 
 
-
+pytest :
+	pytest -v
+	
 
 #EOF

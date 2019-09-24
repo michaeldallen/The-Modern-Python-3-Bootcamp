@@ -3,11 +3,6 @@ pipeline {
         dockerfile true
     }
     stages {
-        stage('init') {
-            steps {
-                slackSend color: 'good', message: "start on ${HOSTNAME}: michaeldallen/m2c-jenkins-${DPKG_ARCH}"           
-            }
-        }
         stage('sanity-check') {
             steps {
                 sh 'id'
@@ -21,10 +16,10 @@ pipeline {
     }
     post {
         success {
-            slackSend color: 'good', message: "finish on ${HOSTNAME}: success: michaeldallen/m2c-jenkins-${DPKG_ARCH}"
+            slackSend color: 'good', message: "finish on ${HOSTNAME}: success: michaeldallen/The-Modern-Python-3-Bootcamp"
         }
         failure {
-            slackSend color: 'danger', message: "finish on ${HOSTNAME}: failure: finished michaeldallen/m2c-jenkins-${DPKG_ARCH}"
+            slackSend color: 'danger', message: "finish on ${HOSTNAME}: failure: finished michaeldallen/The-Modern-Python-3-Bootcamp"
         }
     }
 }

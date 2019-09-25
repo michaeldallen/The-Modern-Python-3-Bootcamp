@@ -30,7 +30,7 @@ make.targets :
 
 
 pytest :
-	python3 -m pytest -v 
+	pytest -v 
 
 #EOF
 

@@ -30,14 +30,7 @@ make.targets :
 
 
 pytest :
-	docker \
-	    run \
-	        --volume "`pwd`":/workdir:ro \
-	        michaeldallen/m2c-python3-`dpkg --print-architecture` \
-	        -m pytest \
-	        -p no:cacheprovider \
-	        -v \
-		 #
+	python3 -m pytest -v 
 
 #EOF
 

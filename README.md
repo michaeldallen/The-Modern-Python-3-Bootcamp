@@ -6,5 +6,7 @@
 - [x] S07/Variables and Strings
 - [ ] S08/Boolean and Conditional Logic
 
-test
-test2 9/24 21:25
+## tests
+* test
+* test2 9/24 21:25
+* test3 9/24 21:30

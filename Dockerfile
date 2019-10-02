@@ -1,12 +1,14 @@
 # Ubuntu
 
-FROM ubuntu:xenial
+FROM ubuntu:18.04
 RUN apt-get update && apt-get -y dist-upgrade
 RUN apt-get update && apt-get -y install \
     \
     bsdmainutils \
     curl \
     make \
+    python3 \
+    python3-pip \
     \
     cowsay
 
@@ -14,9 +16,7 @@ RUN apt-get update && apt-get -y install \
 
 # Python
 
-RUN apt-get update && apt-get install -y python3 
-RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py
-RUN pip install pytest 
+RUN pip3 install pytest 
 
 
 

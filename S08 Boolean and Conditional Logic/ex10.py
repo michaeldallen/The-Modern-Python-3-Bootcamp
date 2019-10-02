@@ -6,12 +6,13 @@ food = choice(['apple','grape', 'bacon', 'steak', 'worm', 'dirt'])
 
 # YOUR CODE GOES HERE vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
-if("apple" == food or "grape" == food):
-    print("fruit")
-elif("bacon" == food or "steak" == food):
-    print("meat")
-elif("dirt" == food or "worm" == food):
-    print()
+if __name__ == "__main__":
+    if("apple" == food or "grape" == food):
+        print("fruit")
+    elif("bacon" == food or "steak" == food):
+        print("meat")
+    elif("dirt" == food or "worm" == food):
+        print()
 
 # YOUR CODE GOES HERE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

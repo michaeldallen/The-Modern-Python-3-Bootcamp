@@ -6,10 +6,11 @@ num = randint(1, 1000) #picks random number from 1-1000
 
 
 # YOUR CODE GOES HERE vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-if(num%2 == 1):
-    print("odd")
-else:
-    print("even")
+if __name__ == "__main__":
+    if(num%2 == 1):
+        print("odd")
+    else:
+        print("even")
 
 
 

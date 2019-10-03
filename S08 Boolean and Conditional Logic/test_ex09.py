@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import MagicMock
 
-from ex9 import am_i_odd
+from ex09 import am_i_odd
 
 
 even_odd_test_data = [

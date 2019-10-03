@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import MagicMock
 
-from ex8 import lucky
+from ex08 import lucky
 
 
 @pytest.mark.parametrize("number,result", [(1, "unlucky"), (7, "lucky"), (10, "unlucky")])

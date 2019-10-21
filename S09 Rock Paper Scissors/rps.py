@@ -2,6 +2,9 @@
 def get_rock_paper_scissors(msg):
     user_input = input(msg).lower()
 
+    if len(user_input) == 0:
+        raise ValueError("no input")
+        
     for rps in ("rock", "paper", "scissors"):
         if (rps.startswith(user_input)):
             return rps

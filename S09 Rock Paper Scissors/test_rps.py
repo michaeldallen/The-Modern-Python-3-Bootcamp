@@ -38,6 +38,7 @@ def test_getGoodRockPaperScissors(user_input, expected_result, monkeypatch):
 
 rps_negative_test_data = [
 
+    (""),
     ("bar"),
     ("foo"),
     ("or"),

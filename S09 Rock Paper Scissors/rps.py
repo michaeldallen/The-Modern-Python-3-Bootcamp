@@ -31,7 +31,8 @@ def shoot(player_1_input, player_2_input):
     return winner[(player_1_input, player_2_input)]
 
 
-
+def cli():
+    pass
 
 
 if __name__ == "__main__":

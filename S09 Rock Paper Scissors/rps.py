@@ -1,3 +1,5 @@
+import click
+import random
 
 def get_rock_paper_scissors(msg):
     user_input = input(msg).lower()
@@ -31,25 +33,33 @@ def shoot(player_1_input, player_2_input):
     return winner[(player_1_input, player_2_input)]
 
 
-def cli():
-    pass
 
 
-if __name__ == "__main__":
-    while True:
-        try:
-            p1 = get_rock_paper_scissors("Player 1: rock, paper, or scissors? ")
-            break
-        except ValueError as err:
-            print(err)
+@click.command()
+@click.option("--p1random", is_flag=True, help="choose rock, paper, or scissors randomly for player 1")
+@click.option("--p2random", is_flag=True, help="choose rock, paper, or scissors randomly for player 2")
+def main(p1random, p2random):
+
+    if(p1random):
+        p1=getRandomChoice()
+    else:
+        while True:
+            try:
+                p1 = get_rock_paper_scissors("Player 1: rock, paper, or scissors? ")
+                break
+            except ValueError as err:
+                print(err)
     print(f"Player 1 guesses '{p1}'")
 
-    while True:
-        try:
-            p2 = get_rock_paper_scissors("Player 2: rock, paper, or scissors? ")
-            break
-        except ValueError as err:
-            print(err)
+    if(p2random):
+        p2=getRandomChoice()
+    else:
+        while True:
+            try:
+                p2 = get_rock_paper_scissors("Player 2: rock, paper, or scissors? ")
+                break
+            except ValueError as err:
+                print(err)
     print(f"Player 2 guesses '{p2}'")
 
     print("SHOOT!")
@@ -59,4 +69,11 @@ if __name__ == "__main__":
     else:
         print(f"{winner} wins")
 
-        
+
+def getRandomChoice():
+    return ["rock", "paper", "scissors"][random.randint(0,2)]
+
+
+
+if __name__ == "__main__":
+    main()

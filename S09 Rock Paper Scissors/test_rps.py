@@ -3,6 +3,7 @@ from unittest.mock import MagicMock
 
 from rps import get_rock_paper_scissors
 from rps import shoot
+from rps import getRandomChoice
 
 rps_positive_test_data = [
     
@@ -93,3 +94,12 @@ def test_shoot(player_1_input, player_2_input, winner, monkeypatch):
     p2 = get_rock_paper_scissors(f"get player 2 input '{player_2_input}'")
 
     assert shoot(p1, p2) == winner
+
+
+def test_getRandomChoice():
+    for x in range(10):
+        c = getRandomChoice()
+        print(f"random choice is {c}")
+        assert c in ("rock", "paper", "scissors")
+    
+    

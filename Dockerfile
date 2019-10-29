@@ -16,7 +16,11 @@ RUN apt-get update && apt-get -y install \
 
 # Python
 
-RUN pip3 install pytest 
+RUN pip3 install \
+    \
+    click \
+    \
+    pytest 
 
 
 

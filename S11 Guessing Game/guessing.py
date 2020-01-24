@@ -6,10 +6,10 @@ from ix import get_yesOrNo
 
 
 def main():
-    
+
     trying = True
     while trying:
-        target = random.randint(1,10)
+        target = random.randint(1, 10)
         tries = 0
         guess = 0
         while guess != target:
@@ -20,10 +20,12 @@ def main():
             elif guess > target:
                 print("too high")
             else:
-                print(f"just right in {tries} tr{'y' if tries == 1 else 'ies'}")
+                suffix = 'y' if tries == 1 else 'ies'
+                print(f"just right in {tries} tr{suffix}")
+
         trying = get_yesOrNo("play again (y/n)? ")
-            
+
 
 if __name__ == "__main__":
     main()
-    
+

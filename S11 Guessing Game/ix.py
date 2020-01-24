@@ -1,7 +1,7 @@
 import re
 
 
-def get_yesOrNo(msg = "Yes or No? "):
+def get_yesOrNo(msg="Yes or No? "):
     user_input = input(msg)
     if not isinstance(user_input, str):
         raise TypeError(f"user input '{user_input}' is not a string")
@@ -13,11 +13,9 @@ def get_yesOrNo(msg = "Yes or No? "):
         return False
 
     raise ValueError(f"user input '{user_input}' is not a 'yes' or 'no'")
-    
 
 
-
-def get_1to10(msg = "Guess a number from 1 to 10: "):
+def get_1to10(msg="Guess a number from 1 to 10: "):
     raw_user_input = input(msg)
     if not raw_user_input.isdigit():
         raise TypeError(f"user input '{raw_user_input}' is not an integer")
@@ -35,4 +33,4 @@ def get_1to10(msg = "Guess a number from 1 to 10: "):
 
 
 
-    
+

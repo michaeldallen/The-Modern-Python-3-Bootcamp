@@ -1,5 +1,6 @@
 import random
 
+
 def suffix(i):
     if i > 10 and i < 20:
         return "th"
@@ -12,9 +13,10 @@ def suffix(i):
     else:
         return "th"
 
+
 def whenIsFive():
     i = 1
-    while not random.randint(1,10) == 5:
+    while not random.randint(1, 10) == 5:
         i += 1
     return i
 
@@ -29,5 +31,5 @@ if __name__ == "__main__":
     main()
 
 
-    
+
 

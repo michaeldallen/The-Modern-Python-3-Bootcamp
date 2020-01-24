@@ -1,18 +1,18 @@
 import click
 import random
 
+
 def get_rock_paper_scissors(msg):
     user_input = input(msg).lower()
 
     if len(user_input) == 0:
         raise ValueError("no input")
-        
+
     for rps in ("rock", "paper", "scissors"):
         if (rps.startswith(user_input)):
             return rps
 
     raise ValueError(f"don't understand user input '{user_input}'")
-
 
 
 winner = {
@@ -29,10 +29,9 @@ winner = {
     ("scissors", "scissors") :     "draw",
 }
 
+
 def shoot(player_1_input, player_2_input):
     return winner[(player_1_input, player_2_input)]
-
-
 
 
 @click.command()
@@ -41,7 +40,7 @@ def shoot(player_1_input, player_2_input):
 def main(p1random, p2random):
 
     if(p1random):
-        p1=getRandomChoice()
+        p1 = getRandomChoice()
     else:
         while True:
             try:
@@ -52,7 +51,7 @@ def main(p1random, p2random):
     print(f"Player 1 guesses '{p1}'")
 
     if(p2random):
-        p2=getRandomChoice()
+        p2 = getRandomChoice()
     else:
         while True:
             try:
@@ -71,8 +70,7 @@ def main(p1random, p2random):
 
 
 def getRandomChoice():
-    return ["rock", "paper", "scissors"][random.randint(0,2)]
-
+    return ["rock", "paper", "scissors"][random.randint(0, 2)]
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@ import pytest
 
 from ex4 import city, price, high_score, is_having_fun
 
+
 def test_variables():
     assert city == "boston"
     assert price == 3.14

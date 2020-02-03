@@ -4,8 +4,8 @@ import pytest
 import sys
 
 
-from lists import get_my_stuff
-from lists import get_nums
+from ex15_lists import get_my_stuff
+from ex15_lists import get_nums
 
 
 def test_my_stuff():

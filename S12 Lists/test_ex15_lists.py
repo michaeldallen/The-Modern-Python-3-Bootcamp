@@ -1,7 +1,4 @@
-
-from unittest.mock import MagicMock
 import pytest
-import sys
 
 
 from ex15_lists import get_my_stuff
@@ -12,6 +9,7 @@ def test_my_stuff():
     ms = get_my_stuff()
     assert len(ms) >= 4
 
+
 def test_my_stuff_has_a_string():
     ms = get_my_stuff()
     has_string = False
@@ -20,8 +18,8 @@ def test_my_stuff_has_a_string():
             has_string = True
             break
     assert has_string
-    
-    
+
+
 def test_my_stuff_has_a_float():
     ms = get_my_stuff()
     has_float = False
@@ -30,8 +28,6 @@ def test_my_stuff_has_a_float():
             has_float = True
             break
     assert has_float
-    
-    
 
 
 def test_nums_contains_1_through_99():
@@ -40,4 +36,4 @@ def test_nums_contains_1_through_99():
     while i <= 99:
         assert i in mn
         i += 1
-            
+

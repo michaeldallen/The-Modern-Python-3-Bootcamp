@@ -20,3 +20,7 @@ def reversal(l):
 
 def divBy12(l):
     return [i for i in l if not i % 12]
+
+
+def amaze(s):
+    return [c for c in s if c not in "aeiou"]

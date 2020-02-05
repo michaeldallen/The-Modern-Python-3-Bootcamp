@@ -4,6 +4,7 @@ from s13_lists_comprehension import firstLetter
 from s13_lists_comprehension import intersection
 from s13_lists_comprehension import reversal
 from s13_lists_comprehension import divBy12
+from s13_lists_comprehension import amaze
 import pytest
 
 
@@ -46,3 +47,9 @@ def test_ex22_divBy12():
     gazouta = divBy12(gazinta)
     assert gazouta == expected_gazouta
 
+
+def test_ex23_amaze():
+    gazinta = "amazing"
+    expected_gazouta = list("mzng")
+    gazouta = amaze(gazinta)
+    assert gazouta == expected_gazouta

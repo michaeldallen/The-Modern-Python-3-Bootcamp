@@ -97,3 +97,108 @@ def test_ex18_embiggenList():
 
     
     
+
+
+
+from s12_lists import listRemoveFirst
+
+def test_ex19_listRemoveFirst():
+
+    instructors = [
+        "Colt",
+        "Blue",
+        "Lisa",
+    ]
+    
+    gazinta = instructors
+    expected = [
+        "Blue",
+        "Lisa",
+    ]
+    gazouta = listRemoveFirst(gazinta)
+    assert gazouta == expected
+
+    gazouta = listRemoveFirst([])
+    assert gazouta == None
+
+
+
+from s12_lists import listRemoveLast
+
+def test_ex19_listRemoveLast():
+
+    instructors = [
+        "Colt",
+        "Blue",
+        "Lisa",
+    ]
+
+    gazinta = instructors
+    expected = [
+        "Colt",
+        "Blue",
+    ]
+    gazouta = listRemoveLast(gazinta)
+    assert gazouta == expected
+
+    gazouta = listRemoveLast([])
+    assert gazouta == None
+    
+
+from s12_lists import listAddLast
+
+    
+def test_ex19_listAddLast():
+
+    instructors = [
+        "Colt",
+        "Blue",
+        "Lisa",
+    ]
+
+    gazinta = instructors
+    
+    expected = [
+        "Colt",
+        "Blue",
+        "Lisa",
+        "Done",
+    ]
+    gazouta = listAddLast(gazinta, "Done")
+    assert gazouta == expected
+
+    gazouta = listAddLast([], "Done")
+    assert gazouta == ["Done"]
+    
+    
+    
+from s12_lists import listAddFirst
+
+    
+def test_ex19_listAddFirst():
+
+    instructors = [
+        "Colt",
+        "Blue",
+        "Lisa",
+    ]
+
+    gazinta = instructors
+    
+    expected = [
+        "Done",
+        "Colt",
+        "Blue",
+        "Lisa",
+    ]
+    gazouta = listAddFirst(gazinta, "Done")
+    assert gazouta == expected
+
+    gazouta = listAddFirst([], "Done")
+    assert gazouta == ["Done"]
+    
+    
+    
+    
+    
+    

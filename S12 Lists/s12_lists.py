@@ -31,3 +31,30 @@ def mashUC(l):
 def embiggenList(l, i):
     l.append(i)
     return l
+
+def listRemoveFirst(l):
+    if len(l) > 0:
+        l.pop(0)
+        return l
+    else:
+        return None
+
+    
+def listRemoveLast(l):
+    if len(l) > 0:
+        l.pop()
+        return l
+    else:
+        return None
+
+def listAddLast(l, i):
+    l.append(i)
+    return l
+
+def listAddFirst(l, i):
+    l.insert(0, i)
+    return l
+
+
+
+    

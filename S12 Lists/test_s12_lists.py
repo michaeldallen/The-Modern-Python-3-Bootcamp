@@ -1,3 +1,10 @@
+from s12_lists import listAddFirst
+from s12_lists import listAddLast
+from s12_lists import listRemoveLast
+from s12_lists import listRemoveFirst
+from s12_lists import embiggenList
+from s12_lists import mashUC
+from s12_lists import thisForThat
 import pytest
 
 
@@ -38,31 +45,24 @@ def test_ex15_nums_contains_1_through_99():
         i += 1
 
 
-
-from s12_lists import thisForThat
-
-
 def test_ex16_thisForThat_singleElementHit():
     assert thisForThat(["Hanna"]) == ["Hannah"]
     assert thisForThat(["Geoffrey"]) == ["Jeffrey"]
     assert thisForThat(["aparna"]) == ["Aparna"]
 
-def test_ex16_thisForThat_singleElementMiss():        
+
+def test_ex16_thisForThat_singleElementMiss():
     assert thisForThat(["foo"]) == ["foo"]
     assert thisForThat(["bar"]) == ["bar"]
 
-def test_ex16_thisForThat_multiElementMixed():    
+
+def test_ex16_thisForThat_multiElementMixed():
     assert thisForThat(["foo", "bar", "baz"]) == ["foo", "bar", "baz"]
 
     raw = ["Hanna", "Louisa", "Claudia", "Angela", "Geoffrey", "aparna"]
     cooked = ["Hannah", "Louisa", "Claudia", "Angela", "Jeffrey", "Aparna"]
     assert thisForThat(raw) == cooked
 
-
-
-
-
-from s12_lists import mashUC
 
 def test_ex17_mashUC():
 
@@ -74,10 +74,6 @@ def test_ex17_mashUC():
     assert result == expected_result
 
 
-
-
-from s12_lists import embiggenList
-
 def test_ex18_embiggenList():
     l = []
     lprime = embiggenList(l, "a")
@@ -87,20 +83,12 @@ def test_ex18_embiggenList():
     lprime = embiggenList(l, "b")
     assert lprime == ["a", "b"]
 
-
     instructors = []
     instructors = embiggenList(instructors, "Colt")
     instructors = embiggenList(instructors, "Blue")
     instructors = embiggenList(instructors, "Lisa")
     assert instructors == ["Colt", "Blue", "Lisa"]
-                                    
 
-    
-    
-
-
-
-from s12_lists import listRemoveFirst
 
 def test_ex19_listRemoveFirst():
 
@@ -109,7 +97,7 @@ def test_ex19_listRemoveFirst():
         "Blue",
         "Lisa",
     ]
-    
+
     gazinta = instructors
     expected = [
         "Blue",
@@ -121,9 +109,6 @@ def test_ex19_listRemoveFirst():
     gazouta = listRemoveFirst([])
     assert gazouta == None
 
-
-
-from s12_lists import listRemoveLast
 
 def test_ex19_listRemoveLast():
 
@@ -143,11 +128,8 @@ def test_ex19_listRemoveLast():
 
     gazouta = listRemoveLast([])
     assert gazouta == None
-    
 
-from s12_lists import listAddLast
 
-    
 def test_ex19_listAddLast():
 
     instructors = [
@@ -157,7 +139,7 @@ def test_ex19_listAddLast():
     ]
 
     gazinta = instructors
-    
+
     expected = [
         "Colt",
         "Blue",
@@ -169,12 +151,8 @@ def test_ex19_listAddLast():
 
     gazouta = listAddLast([], "Done")
     assert gazouta == ["Done"]
-    
-    
-    
-from s12_lists import listAddFirst
 
-    
+
 def test_ex19_listAddFirst():
 
     instructors = [
@@ -184,7 +162,7 @@ def test_ex19_listAddFirst():
     ]
 
     gazinta = instructors
-    
+
     expected = [
         "Done",
         "Colt",
@@ -196,9 +174,9 @@ def test_ex19_listAddFirst():
 
     gazouta = listAddFirst([], "Done")
     assert gazouta == ["Done"]
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+

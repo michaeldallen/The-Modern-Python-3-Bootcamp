@@ -7,9 +7,9 @@ def get_nums():
 
 
 thats = {
-        "Hanna" : "Hannah",
-        "Geoffrey" : "Jeffrey",
-        "aparna" : "Aparna",
+    "Hanna": "Hannah",
+    "Geoffrey": "Jeffrey",
+    "aparna": "Aparna",
 }
 
 
@@ -27,10 +27,10 @@ def mashUC(l):
     return rv
 
 
-
 def embiggenList(l, i):
     l.append(i)
     return l
+
 
 def listRemoveFirst(l):
     if len(l) > 0:
@@ -39,7 +39,7 @@ def listRemoveFirst(l):
     else:
         return None
 
-    
+
 def listRemoveLast(l):
     if len(l) > 0:
         l.pop()
@@ -47,9 +47,11 @@ def listRemoveLast(l):
     else:
         return None
 
+
 def listAddLast(l, i):
     l.append(i)
     return l
+
 
 def listAddFirst(l, i):
     l.insert(0, i)
@@ -57,4 +59,4 @@ def listAddFirst(l, i):
 
 
 
-    
+

@@ -28,11 +28,6 @@ def mashUC(l):
 
 
 
-def main():
-    pass
-
-
-if __name__ == "__main__":
-    main()
-
-
+def embiggenList(l, i):
+    l.append(i)
+    return l

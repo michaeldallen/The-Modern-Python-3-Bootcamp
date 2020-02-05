@@ -72,3 +72,28 @@ def test_ex17_mashUC():
     result = mashUC(sounds)
 
     assert result == expected_result
+
+
+
+
+from s12_lists import embiggenList
+
+def test_ex18_embiggenList():
+    l = []
+    lprime = embiggenList(l, "a")
+    assert lprime == ["a"]
+
+    l = lprime
+    lprime = embiggenList(l, "b")
+    assert lprime == ["a", "b"]
+
+
+    instructors = []
+    instructors = embiggenList(instructors, "Colt")
+    instructors = embiggenList(instructors, "Blue")
+    instructors = embiggenList(instructors, "Lisa")
+    assert instructors == ["Colt", "Blue", "Lisa"]
+                                    
+
+    
+    

@@ -24,3 +24,9 @@ def divBy12(l):
 
 def amaze(s):
     return [c for c in s if c not in "aeiou"]
+
+def list3x3():
+    return [[c for c in range(0, 3)] for r in range(1, 4)]
+
+def list10x10():
+    return [[c for c in range(0, 10)] for r in range(0, 10)]

@@ -5,6 +5,8 @@ from s13_lists_comprehension import intersection
 from s13_lists_comprehension import reversal
 from s13_lists_comprehension import divBy12
 from s13_lists_comprehension import amaze
+from s13_lists_comprehension import list3x3
+from s13_lists_comprehension import list10x10
 import pytest
 
 
@@ -53,3 +55,31 @@ def test_ex23_amaze():
     expected_gazouta = list("mzng")
     gazouta = amaze(gazinta)
     assert gazouta == expected_gazouta
+
+
+def test_ex24_list3x3():
+    expected_gazouta = [
+        [0, 1, 2],
+        [0, 1, 2],
+        [0, 1, 2],
+    ]        
+    gazouta = list3x3()
+    assert gazouta == expected_gazouta
+
+
+def test_ex25_list10x10():
+    expected_gazouta = [
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    ]        
+    gazouta = list10x10()
+    assert gazouta == expected_gazouta
+    

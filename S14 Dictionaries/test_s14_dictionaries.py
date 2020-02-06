@@ -36,7 +36,8 @@ def test_ex28_donations():
 
 
 def test_ex29_bakeryChoice(monkeypatch):
-    monkeypatch.setattr(random, "choice", MagicMock(return_value = "peanut butter Think! bar"))
+    monkeypatch.setattr(random, "choice", MagicMock(
+        return_value="peanut butter Think! bar"))
     assert bakeryChoice() == "peanut butter Think! bar"
 
 
@@ -50,6 +51,7 @@ def test_ex29_checkStockGood(monkeypatch):
     monkeypatch.setattr("builtins.print", mock_print)
     checkStock("tea cake")
     mock_print.assert_called_once_with("25 left")
+
 
 def test_ex29_checkStockBad(monkeypatch):
     mock_print = MagicMock()

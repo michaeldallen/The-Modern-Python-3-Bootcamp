@@ -16,18 +16,19 @@ def totalDonations(donations):
 
 
 def bakeryChoice():
-    food = random.choice(["cheese pizza", "quiche","morning bun","gummy bear","tea cake"])
+    food = random.choice(
+        ["cheese pizza", "quiche", "morning bun", "gummy bear", "tea cake"])
     return food
 
 
 def bakeryInStock(item):
     bakery_stock = {
-            "almond croissant" : 12,
-            "toffee cookie": 3,
-            "morning bun": 1,
-            "chocolate chunk cookie": 9,
-            "tea cake": 25
-        }
+        "almond croissant": 12,
+        "toffee cookie": 3,
+        "morning bun": 1,
+        "chocolate chunk cookie": 9,
+        "tea cake": 25
+    }
     if bakery_stock.get(item):
         return bakery_stock[item]
     else:
@@ -41,6 +42,6 @@ def checkStock(item):
     else:
         print(f"{stock} left")
 
-        
-    
-    
+
+
+

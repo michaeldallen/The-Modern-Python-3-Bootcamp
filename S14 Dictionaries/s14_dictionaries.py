@@ -43,7 +43,7 @@ def checkStock(item = None):
     if stock == None:
         print("We don't make that")
     else:
-        print(f"{stock} left")
+        print("{} left".format(stock))
 
 
 

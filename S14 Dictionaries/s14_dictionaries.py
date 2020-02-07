@@ -35,7 +35,10 @@ def bakeryInStock(item):
         return None
 
 
-def checkStock(item):
+def checkStock(item = None):
+    if not item:
+        item = bakeryChoice()
+        
     stock = bakeryInStock(item)
     if stock == None:
         print("We don't make that")

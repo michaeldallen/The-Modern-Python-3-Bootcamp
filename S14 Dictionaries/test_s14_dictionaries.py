@@ -53,8 +53,19 @@ def test_ex29_checkStockGood(monkeypatch):
     mock_print.assert_called_once_with("25 left")
 
 
+def test_ex29_checkStockGood2(monkeypatch):
+    monkeypatch.setattr(random, "choice", MagicMock(return_value="morning bun"))
+    mock_print = MagicMock()
+    monkeypatch.setattr("builtins.print", mock_print)
+    checkStock()
+    mock_print.assert_called_once_with("1 left")
+
+
 def test_ex29_checkStockBad(monkeypatch):
     mock_print = MagicMock()
     monkeypatch.setattr("builtins.print", mock_print)
     checkStock("peanut butter Think! bar")
     mock_print.assert_called_once_with("We don't make that")
+
+
+     

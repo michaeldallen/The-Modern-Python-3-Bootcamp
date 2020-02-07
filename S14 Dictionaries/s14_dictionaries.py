@@ -35,10 +35,10 @@ def bakeryInStock(item):
         return None
 
 
-def checkStock(item = None):
+def checkStock(item=None):
     if not item:
         item = bakeryChoice()
-        
+
     stock = bakeryInStock(item)
     if stock == None:
         print("We don't make that")
@@ -46,5 +46,6 @@ def checkStock(item = None):
         print("{} left".format(stock))
 
 
-
-
+def getInitialGameState(game_properties):
+    initial_game_state = dict.fromkeys(game_properties, 0)
+    return initial_game_state

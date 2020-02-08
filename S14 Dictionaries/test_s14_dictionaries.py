@@ -103,7 +103,7 @@ def test_ex30_fromKeys():
     assert gazouta == expected_gazouta
 
 
-def test_ex30_cookies():
+def test_ex31_cookies():
     gazinta = {
         'croissant': 19,
         'bagel': 4,
@@ -121,3 +121,5 @@ def test_ex30_cookies():
     assert gazinta == initial_gazinta
     assert gazouta == expected_gazouta
     
+
+

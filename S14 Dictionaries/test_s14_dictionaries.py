@@ -9,6 +9,7 @@ from s14_dictionaries import bakeryChoice
 from s14_dictionaries import bakeryInStock
 from s14_dictionaries import checkStock
 from s14_dictionaries import getInitialGameState
+from s14_dictionaries import cookies
 
 
 def test_ex26_create():
@@ -101,3 +102,22 @@ def test_ex30_fromKeys():
     gazouta = getInitialGameState(gazinta)
     assert gazouta == expected_gazouta
 
+
+def test_ex30_cookies():
+    gazinta = {
+        'croissant': 19,
+        'bagel': 4,
+        'muffin': 8,
+        'cake': 1,
+    }
+    initial_gazinta = gazinta.copy()
+    expected_gazouta = {
+        'croissant': 19,
+        'bagel': 4,
+        'muffin': 8,
+        'cookie': 18,
+    }
+    gazouta = cookies(gazinta)
+    assert gazinta == initial_gazinta
+    assert gazouta == expected_gazouta
+    

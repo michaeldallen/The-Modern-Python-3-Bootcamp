@@ -49,3 +49,12 @@ def checkStock(item=None):
 def getInitialGameState(game_properties):
     initial_game_state = dict.fromkeys(game_properties, 0)
     return initial_game_state
+
+
+def cookies(inventory):
+
+    stock_list = inventory.copy()
+    stock_list["cookie"] = 18
+    stock_list.pop("cake")
+    
+    return stock_list

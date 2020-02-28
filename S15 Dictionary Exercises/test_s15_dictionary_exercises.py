@@ -5,17 +5,19 @@ from s15_dictionary_exercises import list_to_dict
 from s15_dictionary_exercises import vowels
 from s15_dictionary_exercises import ascii
 
+
 def test_abbreviations_for():
     gazinta1 = ["CA", "NJ", "RI"]
     gazinta2 = ["California", "New Jersey", "Rhode Island"]
-    expected_gazouta = {'CA': 'California', 'NJ': 'New Jersey', 'RI': 'Rhode Island'}
+    expected_gazouta = {'CA': 'California',
+                        'NJ': 'New Jersey', 'RI': 'Rhode Island'}
     gazouta = gazaouta = abbreviations_for(gazinta1, gazinta2)
     assert gazouta == expected_gazouta
 
 
 def test_list_to_dict():
     gazinta = [["name", "Jared"], ["job", "Musician"], ["city", "Bern"]]
-    expected_gazouta =  {'name': 'Jared', 'job': 'Musician', 'city': 'Bern'}
+    expected_gazouta = {'name': 'Jared', 'job': 'Musician', 'city': 'Bern'}
     gazouta = list_to_dict(gazinta)
     assert gazouta == expected_gazouta
 
@@ -58,4 +60,4 @@ def test_ascii():
     gazouta = ascii()
     assert gazouta == expected_gazouta
 
-    
+

@@ -4,6 +4,7 @@ from unittest.mock import MagicMock
 from functions import make_noise
 from functions import speak_pig
 from functions import generate_evens
+from functions import yell
 
 
 def test_make_noise(monkeypatch):
@@ -31,3 +32,14 @@ def test_generate_evens():
     assert gazouta == expected_gazouta
 
 
+yell_test_data = [
+    ("foo", "FOO!"),
+    ("go away", "GO AWAY!"),
+    ("leave me alone", "LEAVE ME ALONE!"),
+]
+        
+@pytest.mark.parametrize("user_input,expected_output", yell_test_data)
+def test_yell(user_input, expected_output):
+    gazouta = yell(user_input)
+    assert gazouta == expected_output
+    

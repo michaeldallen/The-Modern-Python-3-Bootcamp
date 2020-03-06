@@ -8,3 +8,7 @@ def speak_pig():
 
 def generate_evens():
     return [x for x in range(2, 50, 2) if x / 2]
+
+
+def yell(param):
+    return f"{param.upper()}!"

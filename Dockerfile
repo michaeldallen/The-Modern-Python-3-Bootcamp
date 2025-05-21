@@ -1,6 +1,6 @@
 # Ubuntu
 
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 RUN apt-get update && apt-get -y dist-upgrade
 RUN apt-get update && apt-get -y install \
     \

@@ -1,6 +1,6 @@
 # Ubuntu
 
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 RUN apt-get update && apt-get -y dist-upgrade
 RUN apt-get update && apt-get -y install \
     \
